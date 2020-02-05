@@ -1,9 +1,14 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic import DetailView, DeleteView, UpdateView, ListView
+from django.views.generic import CreateView, DetailView, DeleteView, UpdateView, ListView
 
 from .models import Article
 
+
+class ArticleCreateView(CreateView):
+    template_name = 'article_create.html'
+    model = Article
+    fields = ['title', 'text', 'author']
 
 class ArticleDeleteView(DeleteView):
     template_name = 'article_delete.html'
