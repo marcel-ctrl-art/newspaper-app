@@ -10,6 +10,7 @@ class ArticleCreateView(CreateView):
     model = Article
     fields = ['title', 'text', 'author']
 
+
 class ArticleDeleteView(DeleteView):
     template_name = 'article_delete.html'
     model = Article
@@ -19,8 +20,6 @@ class ArticleDeleteView(DeleteView):
 class ArticleDetailView(DetailView):
     template_name = 'article_detail.html'
     model = Article
-    context_object_name = 'articles'
-
 
 class ArticlesListView(ListView):
     model = Article
@@ -32,4 +31,4 @@ class ArticlesListView(ListView):
 class ArticleEditView(UpdateView):
     model = Article
     fields = ['title', 'text']
-    template_name = 'article_update.html'
+    template_name = 'article_edit.html'
