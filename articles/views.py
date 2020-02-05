@@ -22,3 +22,9 @@ class ArticlesListView(ListView):
     paginate_by = 3
     template_name = 'articles_list.html'
     context_object_name = 'articles'
+
+
+class ArticleEditView(UpdateView):
+    model = Article
+    fields = ['title', 'text']
+    template_name = 'article_update.html'
