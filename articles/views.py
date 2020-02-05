@@ -12,6 +12,12 @@ class ArticleDeleteView(DeleteView):
     success_url = reverse_lazy('article_list')
 
 
+class ArticleDetailView(DetailView):
+    template_name = 'article_detail.html'
+    model = Article
+    context_object_name = 'articles'
+
+
 class ArticlesListView(ListView):
     model = Article
     paginate_by = 3
