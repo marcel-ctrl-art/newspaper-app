@@ -8,7 +8,6 @@ from .models import Article
 class ArticleDeleteView(DeleteView):
     template_name = 'article_delete.html'
     model = Article
-    context_object_name = 'articles'
     success_url = reverse_lazy('article_list')
 
 
