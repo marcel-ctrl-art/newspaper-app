@@ -28,7 +28,7 @@ Technologies used:
 
 ## App Workflow
 
-After signing up user is redirected to log in. Only after login user is allowed to write/edit & comment on selected articles.
+After signing up user is redirected to log in. Only after loggingin user is allowed to write/edit/comment on selected articles.
 
 Home Page
 
